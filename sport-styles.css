@@ -1,0 +1,501 @@
+@font-face {
+    font-family: 'Nohemi';
+    src: url('./Nohemi.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nohemi', sans-serif;
+    background-color: #161616;
+    color: #ECD5B3;
+    line-height: 1.6;
+    position: relative;
+}
+
+/* Grain texture overlay */
+body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("grain.png");
+    background-repeat: repeat;
+    background-attachment: scroll;
+    opacity: 0.4;
+    pointer-events: none;
+    z-index: 0;
+    mix-blend-mode: overlay;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    z-index: 2;
+    overflow-x: hidden;
+}
+
+/* Project Header Styles */
+.project-header {
+    padding: 2rem;
+    position: relative;
+    min-height: 10vh;
+    display: flex;
+    flex-direction: column;
+    transition: padding 0.3s ease;
+}
+
+.year-tag {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    padding: 0.3rem 0.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    z-index: 10;
+}
+
+.back-button {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    z-index: 10;
+    color: #ECD5B3;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.back-button a:hover {
+    color: #f2f2f2;
+}
+
+.nav-links a {
+    color: #ECD5B3;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: color 0.3s ease;
+}
+
+.home-link {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+}
+
+.glossary-link {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    padding: 0.3rem 0.8rem;
+}
+
+.project-title-section {
+    margin-top: 9rem;
+}
+
+.project-title {
+    font-size: 12rem;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    background: linear-gradient(.47turn, #f2f2f2, #f2f2f21a 60%); /* Turquoise gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    opacity: 1;
+    z-index: 1;
+}
+
+/* Project Hero Section */
+.project-hero {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: -3rem;
+}
+
+.hero-image {
+    width: 40%;
+    height: auto;
+    margin-top: -18rem;
+    margin-left: 15rem;
+    border-radius: 5rem;
+    overflow: hidden;
+    box-shadow: 0 0 40px rgba(227, 227, 227, 0.3);
+    z-index: 1;
+    transform: rotate(-90deg);
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Project Info Section */
+.project-info-section {
+    padding: 0 2rem;
+    margin-bottom: 5rem;
+}
+
+.project-goal h2 {
+    font-size: 10rem;
+    margin-bottom: -7rem;
+    color: #ECD5B3;
+    opacity: .1;
+    position: relative;
+    z-index: 1;
+}
+
+.project-goal p {
+    font-size: 1.5rem;
+    text-align: justify;
+    line-height: 1.4;
+    margin-top: -3rem;
+    position: relative;
+    z-index: 2;
+    max-width: 60%;
+    margin-left: auto;
+}
+
+/* Project Mobile Section */
+.project-mobile h2 {
+    font-size: 10rem;
+    margin-bottom: -13.5rem;
+    color: #ECD5B3;
+    opacity: .1;
+    user-select: none;
+}
+
+.project-mobile {
+    padding: 0 2rem;
+    display: block;
+}
+
+.mobile-screens {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    gap: 2rem;
+    margin-top: 8rem;
+}
+
+.mobile-screen {
+    flex: 1;
+    max-width: 28%;
+    background-color: transparent;
+}
+
+.mobile-screen img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 1.5rem;
+}
+
+/* Project Contact Section */
+.contact {
+    min-height: 30vh;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.contact-container {
+    position: relative;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 0;
+    border-radius: 2rem;
+}
+
+.contact-link {
+    text-decoration: none;
+    color: #ECD5B3;
+    width: 100%;
+}
+
+.message-container {
+    position: relative;
+    background-color: rgba(30, 30, 30, 0.5);
+    border-radius: 2rem;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.message-container:hover {
+    border-color: rgba(112, 214, 216, 0.3);
+    box-shadow: 0 10px 30px rgba(112, 214, 216, 0.1);
+}
+
+.message-text {
+    font-size: 2rem;
+    color: #ECD5B3;
+    z-index: 1;
+    text-align: center;
+}
+
+.message-circle {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 1;
+}
+
+.query {
+    left: 50px;
+    top: 20px;
+}
+
+.request {
+    right: 80px;
+    bottom: 20px;
+}
+
+.project {
+    left: 150px;
+    bottom: 30px;
+}
+
+.arrow-icon {
+    position: absolute;
+    right: 30px;
+    font-size: 2rem;
+    z-index: 1;
+}
+
+/* Divider */
+.divider {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 3rem;
+}
+
+/* Contact Section */
+.contact {
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+/* Background Text for CONTACT section */
+.contact::before {
+    content: "CONTACT";
+    position: absolute;
+    font-size: 19vh;
+    opacity: 0.1;
+    font-weight: normal;
+    text-transform: uppercase;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+/* Contact card container */
+.contact-container {
+    margin-top: 3rem;
+    position: relative;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Blur effect behind the card */
+.contact-blur {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 19.3rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 0;
+    border-radius: 3rem;
+}
+
+.contact-image {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: auto;
+    transition: all 0.3s ease-in-out;
+    outline: 2px solid transparent; /* Initial border */
+    outline-offset: -2px;
+    border-radius: 42px;
+}
+
+.contact-image:hover {
+    box-shadow: inset 0 0 40px 0 #ECD5B381; /* Glow effect */  
+    outline-color: #ecd5b3; /* Border lights up on hover */
+}
+
+/* Footer Styles */
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #1a1a1a;
+    color: #ECD5B3;
+    font-size: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+.footer p {
+    margin: 0;
+    font-weight: 500;
+}
+
+.project-goal h2,
+.project-website h2,
+.contact h2,
+.project-title-section h1 {
+    user-select: none; /* Prevents text selection */
+    -webkit-user-select: none; /* For Safari */
+    -moz-user-select: none; /* For Firefox */
+    -ms-user-select: none; /* For older versions of Internet Explorer */
+    pointer-events: none; /* Prevents cursor change and interaction */
+}
+
+/* Grain texture overlay */
+body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("imgs/grain.png");
+    background-repeat: repeat;
+    background-attachment: scroll;
+    opacity: 0.4;
+    pointer-events: none;
+    z-index: 0;
+    mix-blend-mode: overlay;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .project-title {
+        font-size: 10rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .project-info-section h2,
+    .project-mobile h2 {
+        font-size: 4rem;
+    }
+    
+    .mobile-screens {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-title {
+        font-size: 5rem;
+    }
+    
+    .project-info-section h2,
+    .project-mobile h2 {
+        font-size: 3rem;
+    }
+    
+    .project-goal p {
+        font-size: 1rem;
+        margin-top: -2rem;
+        max-width: 90%;
+    }
+    
+    .mobile-screens {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .mobile-screen {
+        max-width: 70%;
+        margin-bottom: 2rem;
+    }
+    
+    .hero-image {
+        width: 95%;
+    }
+    
+    .message-text {
+        font-size: 1.5rem;
+    }
+    
+    .contact-container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 576px) {
+    .project-title {
+        font-size: 3.5rem;
+    }
+    
+    .project-info-section h2,
+    .project-mobile h2 {
+        font-size: 2.5rem;
+    }
+    
+    .nav-links a {
+        font-size: 0.7rem;
+    }
+    
+    .message-circle {
+        width: 60px;
+        height: 60px;
+        font-size: 0.6rem;
+    }
+    
+    .message-text {
+        font-size: 1.2rem;
+    }
+}
