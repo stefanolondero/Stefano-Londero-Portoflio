@@ -15,12 +15,8 @@ This repository contains the personal portfolio website of Stefano Londero, a Co
 - CSS3
 - JavaScript
 
-## How to Run
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/portfolio-website.git
-   ```
-2. Open `index.html` in your preferred web browser.
+## How to View
+1. Go to [Stefano's Portfolio](https://stefano-portfolio-fngw3.ondigitalocean.app)
 
 ## Projects Showcased
 1. **WePatch Branding & Design** (Q4 2023)
