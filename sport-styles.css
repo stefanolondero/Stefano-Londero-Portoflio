@@ -139,7 +139,6 @@ body::after {
     overflow: hidden;
     box-shadow: 0 0 40px rgba(227, 227, 227, 0.3);
     z-index: 1;
-    transform: rotate(-90deg);
 }
 
 .hero-image img {
