@@ -117,7 +117,7 @@ body::after {
     margin-top: -10rem;
     margin-left: 15rem;
     background-color: #FF6B00;
-    border-radius: 8vh;
+    border-radius: 50px;
     overflow: hidden;
     box-shadow: 0 0 40px rgba(255, 106, 0, 0.576);
     z-index: 1;
@@ -404,7 +404,7 @@ body::after {
 
 @media (max-width: 768px) {
     .project-title {
-        font-size: 5rem;
+        font-size: 6rem;
     }
     
     .project-info-section h2,
@@ -428,18 +428,37 @@ body::after {
     }
     
     .hero-image {
-        width: 95%;
+        height: 100%;
+        border-radius: 20px; /* Adjusted for smaller screens */
+        margin-top: -5rem;
+    }
+    
+    .card {
+        border-radius: 20px; /* Adjusted for smaller screens */
     }
 }
 
 @media (max-width: 576px) {
     .project-title {
-        font-size: 3.5rem;
+        margin-top: -5rem;
+        font-size: 4rem;
     }
     
     .project-info-section h2,
     .project-website h2 {
         font-size: 2.5rem;
+    }
+
+    .project-goal p {
+        font-size: 1rem;
+        margin-top: 2rem;
+    }
+
+    .divider {
+        width: 85%;
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.2);
+        margin-left: 2.1rem;
     }
     
     .year-tag,
@@ -455,5 +474,15 @@ body::after {
     .contact-button {
         width: 100%;
         text-align: center;
+    }
+    
+    .hero-image {
+        border-radius: 20px; /* Further reduced for very small screens */
+        margin-top: -4rem;
+        margin-right: 2rem;
+    }
+    
+    .card {
+        border-radius: 10px; /* Further reduced for very small screens */
     }
 }
