@@ -70,7 +70,7 @@ body::after {
 
 .back-button {
     position: absolute;
-    top: 2rem;
+    top: 1.1rem;
     left: 2rem;
     z-index: 10;
 }
@@ -83,7 +83,7 @@ body::after {
 }
 
 .back-button a:hover {
-    color: #FF6B00;
+    color: #ff8630;
 }
 
 .project-title-section {
@@ -461,25 +461,68 @@ body::after {
         margin-left: 2.1rem;
     }
     
-    .year-tag,
-    .back-button {
+    .year-tag {
         top: 1rem;
+        font-size: 0.7rem;
+        padding: 0.3rem 0.6rem;
     }
     
     .contact-buttons {
         flex-direction: column;
         align-items: center;
     }
+
+    .contact::before {
+        font-size: 10vh; /* Adjusted for smaller screens */
+        top: 25%;
+    }
+
+    .project-mobile h2 {
+        font-size: 3rem;
+        margin-bottom: -1rem;
+        color: #ECD5B3;
+        opacity: .1;
+    }
     
     .contact-button {
         width: 100%;
         text-align: center;
     }
+
+    .contact-image {
+        outline: 1px solid transparent; /* Initial border */
+        outline-offset: -1px;
+        border-radius: 15px;
+    }
+    
+    .contact-image:hover {
+        box-shadow: inset 0 0 30px 0 #ECD5B381; /* Glow effect */  
+        outline-color: #ecd5b3; /* Border lights up on hover */
+    }
+
+    .contact-blur {
+        position: absolute;
+        width: 100%;
+        height: 122px;
+        backdrop-filter: blur(7px);
+        -webkit-backdrop-filter: blur(7px);
+        z-index: 0;
+        border-radius: 15px;
+    }
+
+    .mobile-screens {
+        width: 70%;
+        max-width: 70%;
+        gap: 1rem;
+    }
     
     .hero-image {
-        border-radius: 20px; /* Further reduced for very small screens */
+        border-radius: 30px; /* Further reduced for very small screens */
         margin-top: -4rem;
-        margin-right: 2rem;
+        margin-right: 1rem;
+        margin-left: 30%;
+        width: 1000px;
+        height: auto;
     }
     
     .card {
