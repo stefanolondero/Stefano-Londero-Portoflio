@@ -63,7 +63,7 @@ header {
 header::before {
     content: "ABOUT";
     position: absolute;
-    font-size: 19vh;
+    font-size: 13vh;
     opacity: 0.1;
     font-weight: normal;
     text-transform: uppercase;
@@ -100,6 +100,7 @@ header::before {
     font-size: 4rem;
     font-weight: lighter;
     margin-bottom: -1rem;
+    line-height: 150%;
 }
 
 .header-text h2 {
@@ -148,12 +149,13 @@ header::before {
     border-radius: 50px;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    object-fit: fill;
 }
 
 .profile-image img {
     width: 100%;
     height: auto;
-    object-fit: cover;
+    object-fit: fill;
 }
 
 .navigation-arrows {
@@ -325,6 +327,12 @@ header::before {
     outline-color: #ecd5b3; /* Border lights up on hover */
 }
 
+.project-contact {
+    padding: 3rem 2rem;
+    display: flex;
+    justify-content: center;
+}
+
 /* Footer section */
 .footer {
     text-align: center;
@@ -356,11 +364,52 @@ header::before {
     
     .header-text h1 {
         font-size: 2.5rem;
+        line-height: 3.4rem;
     }
     
     .header-text h2 {
         font-size: 1.8rem;
+        line-height: 3.4rem;
     }
+
+    .header-text a {
+        position: relative;
+        font-size: 12px;
+    }
+
+    .profile-image {
+        border-radius: 2rem;
+        onject-fit: fill;
+    }
+
+    .profile-image img {
+        object-fit: fill;
+    }
+
+/*
+    .header-text h1 {
+        font-size: 4rem;
+        font-weight: lighter;
+        margin-bottom: -1rem;
+        line-height: 150%;
+    }
+    
+    .header-text h2 {
+        font-size: 3.5rem;
+        font-weight: lighter;
+        margin-bottom: -1.5rem;
+    }
+    
+    .header-text a {
+        display: inline-block;
+        left: 2px;
+        margin-top: 50px;
+        color: #ECD5B3;
+        font-size: 14px;
+        position: absolute;
+        text-decoration: underline;
+    }
+*/
     
     .projects-grid {
         grid-template-columns: 1fr;
@@ -370,16 +419,34 @@ header::before {
         font-size: 4rem;
     }
     
+    .contact::before {
+        font-size: 10vh; /* Adjusted for smaller screens */
+        top: 25%;
+    }
+
+    .project-mobile h2 {
+        font-size: 3rem;
+        margin-bottom: -1rem;
+        color: #ECD5B3;
+        opacity: .1;
+    }
+    
+    .contact-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .contact-image {
+        outline: 1px solid transparent; /* Initial border */
+        outline-offset: -1px;
+        border-radius: 15px;
+    }
+
     .contact {
         min-height: 30vh;
         display: flex;
         justify-content: center;
         position: relative;
-    }
-    
-    .contact-image:hover {
-        box-shadow: inset 0 0 30px 0 #ECD5B381; /* Glow effect */  
-        outline-color: #ecd5b3; /* Border lights up on hover */
     }
 
     .contact-blur {

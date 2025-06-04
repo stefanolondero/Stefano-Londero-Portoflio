@@ -301,44 +301,6 @@ body::after {
     justify-content: center;
 }
 
-.contact-card {
-    background-color: rgba(30, 30, 30, 0.5);
-    border-radius: 20px;
-    padding: 2rem;
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    max-width: 600px;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-.contact-card h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    text-align: center;
-    color: #ECD5B3;
-}
-
-.contact-buttons {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-.contact-button {
-    background-color: rgba(255, 107, 0, 0.1);
-    border: 1px solid rgba(255, 107, 0, 0.3);
-    border-radius: 30px;
-    padding: 0.8rem 1.5rem;
-    color: #ECD5B3;
-    font-size: 0.9rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
 /* Divider */
 .divider {
     width: 100%;
@@ -491,7 +453,7 @@ body::after {
         justify-content: center;
         position: relative;
     }
-    
+
     .contact-blur {
         position: absolute;
         width: 100%;
