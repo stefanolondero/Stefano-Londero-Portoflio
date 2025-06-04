@@ -79,6 +79,10 @@ body::after {
     transition: color 0.3s ease;
 }
 
+.back-button a {
+    color: #ECD5B3;
+}
+
 .back-button a:hover {
     color: #F2F2F2;
 }
