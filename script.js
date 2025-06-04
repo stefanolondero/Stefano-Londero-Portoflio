@@ -10,41 +10,44 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const cards = document.querySelectorAll(".card");
 
-    cards.forEach((card) => {
-        card.addEventListener("mouseenter", (event) => {
-            setTransition(card);
+    // Check if the screen width is greater than 576px (mobile breakpoint)
+    if (window.innerWidth > 576) {
+        cards.forEach((card) => {
+            card.addEventListener("mouseenter", (event) => {
+                setTransition(card);
+            });
+
+            card.addEventListener("mousemove", (event) => {
+                const cardRect = card.getBoundingClientRect();
+                const cardWidth = cardRect.width;
+                const cardHeight = cardRect.height;
+                const centerX = cardRect.left + cardWidth / 2;
+                const centerY = cardRect.top + cardHeight / 2;
+                const mouseX = event.clientX - centerX;
+                const mouseY = event.clientY - centerY;
+
+                const rotateX = (tiltEffectSettings.max * mouseY) / (cardHeight / 2);
+                const rotateY = (-tiltEffectSettings.max * mouseX) / (cardWidth / 2);
+
+                card.style.transform = `
+                    perspective(${tiltEffectSettings.perspective}px)
+                    rotateX(${rotateX}deg)
+                    rotateY(${rotateY}deg)
+                    scale(${tiltEffectSettings.scale})
+                `;
+            });
+
+            card.addEventListener("mouseleave", (event) => {
+                card.style.transform = `
+                    perspective(${tiltEffectSettings.perspective}px)
+                    rotateX(0deg)
+                    rotateY(0deg)
+                    scale(1)
+                `;
+                setTransition(card);
+            });
         });
-
-        card.addEventListener("mousemove", (event) => {
-            const cardRect = card.getBoundingClientRect();
-            const cardWidth = cardRect.width;
-            const cardHeight = cardRect.height;
-            const centerX = cardRect.left + cardWidth / 2;
-            const centerY = cardRect.top + cardHeight / 2;
-            const mouseX = event.clientX - centerX;
-            const mouseY = event.clientY - centerY;
-
-            const rotateX = (tiltEffectSettings.max * mouseY) / (cardHeight / 2);
-            const rotateY = (-tiltEffectSettings.max * mouseX) / (cardWidth / 2);
-
-            card.style.transform = `
-                perspective(${tiltEffectSettings.perspective}px)
-                rotateX(${rotateX}deg)
-                rotateY(${rotateY}deg)
-                scale(${tiltEffectSettings.scale})
-            `;
-        });
-
-        card.addEventListener("mouseleave", (event) => {
-            card.style.transform = `
-                perspective(${tiltEffectSettings.perspective}px)
-                rotateX(0deg)
-                rotateY(0deg)
-                scale(1)
-            `;
-            setTransition(card);
-        });
-    });
+    }
 
     function setTransition(card) {
         card.style.transition = `transform ${tiltEffectSettings.speed}ms ${tiltEffectSettings.easing}`;
