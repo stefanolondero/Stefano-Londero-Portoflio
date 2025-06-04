@@ -508,8 +508,8 @@ body::after {
     }
 
     .mobile-screens {
-        width: 100%;
-        gap: 1rem;
+        width: 200%;
+        gap: 3rem;
         align-items: center;
     }
     
