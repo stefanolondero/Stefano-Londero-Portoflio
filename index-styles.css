@@ -277,7 +277,6 @@ header::before {
     position: relative;
 }
 
-/* Background Text for CONTACT section */
 .contact::before {
     content: "CONTACT";
     position: absolute;
@@ -291,7 +290,6 @@ header::before {
     z-index: -1;
 }
 
-/* Contact card container */
 .contact-container {
     margin-top: 3rem;
     position: relative;
@@ -300,7 +298,6 @@ header::before {
     justify-content: center;
 }
 
-/* Blur effect behind the card */
 .contact-blur {
     position: absolute;
     top: 0;
@@ -310,6 +307,22 @@ header::before {
     -webkit-backdrop-filter: blur(10px);
     z-index: 0;
     border-radius: 3rem;
+}
+
+.contact-image {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: auto;
+    transition: all 0.3s ease-in-out;
+    outline: 2px solid transparent; /* Initial border */
+    outline-offset: -2px;
+    border-radius: 42px;
+}
+
+.contact-image:hover {
+    box-shadow: inset 0 0 40px 0 #ECD5B381; /* Glow effect */  
+    outline-color: #ecd5b3; /* Border lights up on hover */
 }
 
 /* Footer section */
@@ -329,30 +342,13 @@ header::before {
     font-weight: 500;
 }
 
-/* Actual contact image */
-.contact-image {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    height: auto;
-    transition: all 0.3s ease-in-out;
-    outline: 2px solid transparent; /* Initial border */
-    outline-offset: -2px;
-    border-radius: 42px;
-}
-
-.contact-image:hover {
-    box-shadow: inset 0 0 40px 0 #ECD5B381; /* Glow effect */  
-    outline-color: #ecd5b3; /* Border lights up on hover */
-}
-
 .arrow-icon {
     display: inline-block;
     margin-left: 0.5rem;
     font-size: 1rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
     .header-content {
         flex-direction: column;
         text-align: center;
@@ -374,7 +370,25 @@ header::before {
         font-size: 4rem;
     }
     
-    .contact-card {
-        padding: 2rem;
+    .contact {
+        min-height: 30vh;
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+    
+    .contact-image:hover {
+        box-shadow: inset 0 0 30px 0 #ECD5B381; /* Glow effect */  
+        outline-color: #ecd5b3; /* Border lights up on hover */
+    }
+
+    .contact-blur {
+        position: absolute;
+        width: 100%;
+        height: 122px;
+        backdrop-filter: blur(7px);
+        -webkit-backdrop-filter: blur(7px);
+        z-index: 0;
+        border-radius: 15px;
     }
 }

@@ -463,11 +463,6 @@ body::after {
         font-size: 0.7rem;
         padding: 0.3rem 0.6rem;
     }
-    
-    .contact-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
 
     .project-goal p {
         margin-left: 40%;
