@@ -197,9 +197,10 @@ header::before {
 .projects::before {
     content: "PROJECTS";
     position: absolute;
-    font-size: 19vh;
+    font-size: 8vh;
     opacity: 0.1;
     text-transform: uppercase;
+    margin-top: -3rem;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: -1;
@@ -217,6 +218,7 @@ header::before {
 .card {
     background-color: #1a1a1a;
     height: 100%;
+    width: auto;
     border-radius: 50px;
     overflow: hidden;
     transform-style: preserve-3d;
@@ -385,34 +387,35 @@ header::before {
     .profile-image img {
         object-fit: fill;
     }
-
-/*
-    .header-text h1 {
-        font-size: 4rem;
-        font-weight: lighter;
-        margin-bottom: -1rem;
-        line-height: 150%;
-    }
-    
-    .header-text h2 {
-        font-size: 3.5rem;
-        font-weight: lighter;
-        margin-bottom: -1.5rem;
-    }
-    
-    .header-text a {
-        display: inline-block;
-        left: 2px;
-        margin-top: 50px;
-        color: #ECD5B3;
-        font-size: 14px;
-        position: absolute;
-        text-decoration: underline;
-    }
-*/
     
     .projects-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Display one card per row */
+        gap: 4rem; /* Reduce the gap between cards */
+    }
+
+    .card {
+        width: 90%; /* Shrink the card width */
+        margin: 0 auto; /* Center the cards */
+        border-radius: 20px; /* Adjust border radius for smaller screens */
+    }
+
+    .project-image {
+        height: 400px; /* Reduce the height of the image container */
+    }
+
+    .project-image img {
+        width: 100%; /* Ensure the image fills the container */
+        height: 100%; /* Ensure the image fills the container */
+        object-fit: cover; /* Maintain aspect ratio and cover the container */
+        border-radius: inherit; /* Match the card's border radius */
+    }
+
+    .project-info h3 {
+        font-size: 0.9rem; /* Adjust font size for the project title */
+    }
+
+    .project-info p {
+        font-size: 0.7rem; /* Adjust font size for the project date */
     }
     
     .section-title {
@@ -420,8 +423,8 @@ header::before {
     }
     
     .contact::before {
-        font-size: 10vh; /* Adjusted for smaller screens */
-        top: 25%;
+        font-size: 9vh; /* Adjusted for smaller screens */
+        top: 35%;
     }
 
     .project-mobile h2 {
@@ -457,5 +460,26 @@ header::before {
         -webkit-backdrop-filter: blur(7px);
         z-index: 0;
         border-radius: 15px;
+    }
+
+    /* Disable tilt effects */
+    .card:hover {
+        transform: none; /* Remove tilt effect */
+        box-shadow: none; /* Remove shadow on hover */
+    }
+
+    .project-image:hover {
+        transform: none; /* Remove tilt effect */
+    }
+
+    /* Disable glow effects */
+    .download-cv-btn:hover {
+        text-shadow: none; /* Remove text glow */
+        box-shadow: none; /* Remove box glow */
+    }
+
+    .contact-image:hover {
+        outline: none; /* Remove hover outline glow */
+        box-shadow: none; /* Remove glow effect */
     }
 }
