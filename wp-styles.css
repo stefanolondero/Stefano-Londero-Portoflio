@@ -229,11 +229,8 @@ body::after {
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.mobile-screen.hovered {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(255, 107, 0, 0.3);
+    align-items: center;
+    align-self: center;
 }
 
 .mobile-screen img {
@@ -472,6 +469,10 @@ body::after {
         align-items: center;
     }
 
+    .project-goal p {
+        margin-left: 40%;
+    }
+
     .contact::before {
         font-size: 10vh; /* Adjusted for smaller screens */
         top: 25%;
@@ -494,6 +495,13 @@ body::after {
         outline-offset: -1px;
         border-radius: 15px;
     }
+
+    .contact {
+        min-height: 30vh;
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
     
     .contact-image:hover {
         box-shadow: inset 0 0 30px 0 #ECD5B381; /* Glow effect */  
@@ -511,16 +519,16 @@ body::after {
     }
 
     .mobile-screens {
-        width: 70%;
-        max-width: 70%;
+        width: 100%;
         gap: 1rem;
+        align-items: center;
     }
     
     .hero-image {
         border-radius: 30px; /* Further reduced for very small screens */
         margin-top: -4rem;
-        margin-right: 1rem;
-        margin-left: 30%;
+        margin-right: 2rem;
+        margin-left: 25%;
         width: 1000px;
         height: auto;
     }
