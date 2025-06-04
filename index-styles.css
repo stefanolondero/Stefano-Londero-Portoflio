@@ -63,7 +63,7 @@ header {
 header::before {
     content: "ABOUT";
     position: absolute;
-    font-size: 13vh;
+    font-size: 19vh;
     opacity: 0.1;
     font-weight: normal;
     text-transform: uppercase;
@@ -197,10 +197,9 @@ header::before {
 .projects::before {
     content: "PROJECTS";
     position: absolute;
-    font-size: 8vh;
+    font-size: 19vh;
     opacity: 0.1;
     text-transform: uppercase;
-    margin-top: -3rem;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: -1;
@@ -364,6 +363,23 @@ header::before {
         text-align: center;
     }
     
+    header {
+        min-height: 70vh;
+    }
+
+    header::before {
+        font-size: 8vh; /* Adjusted for smaller screens */
+        margin-top: -3rem; /* Adjusted to position the text correctly */
+        top: 50%; /* Center vertically */
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .projects::before {
+        font-size: 8vh; /* Adjusted for smaller screens */
+        margin-top: -3rem;
+    }
+    
     .header-text h1 {
         font-size: 2.5rem;
         line-height: 3.4rem;
@@ -381,7 +397,7 @@ header::before {
 
     .profile-image {
         border-radius: 2rem;
-        onject-fit: fill;
+        object-fit: fill;
     }
 
     .profile-image img {
