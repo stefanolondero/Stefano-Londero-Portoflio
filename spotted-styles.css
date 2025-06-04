@@ -79,6 +79,10 @@ body::after {
     transition: color 0.3s ease;
 }
 
+.back-button a {
+    color: #ECD5B3;
+}
+
 .back-button a:hover {
     color: #4FA7BD;
 }
@@ -508,9 +512,18 @@ body::after {
     }
 
     .mobile-screens {
-        width: 200%;
+        width: 100%;
         gap: 3rem;
         align-items: center;
+    }
+
+    .mobile-screen {
+        max-width: 90%;
+        background-color: transparent;
+    }
+
+    .project-mobile h2 {
+        margin-bottom: -9rem;
     }
     
     .hero-image {
