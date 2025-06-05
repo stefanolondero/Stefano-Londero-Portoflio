@@ -137,7 +137,8 @@ body::after {
 .hero-image {
     width: 40%;
     height: auto;
-    margin-top: -18rem;
+    margin-top: -10rem;
+    margin-bottom: 3rem;
     margin-left: 15rem;
     border-radius: 5rem;
     overflow: hidden;
@@ -222,81 +223,6 @@ body::after {
     margin-bottom: 3rem;
 }
 
-.contact-container {
-    position: relative;
-    width: 60%;
-    display: flex;
-    justify-content: center;
-}
-
-.contact-blur {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    z-index: 0;
-    border-radius: 2rem;
-}
-
-.contact-link {
-    text-decoration: none;
-    color: #ECD5B3;
-    width: 100%;
-}
-
-.message-container {
-    position: relative;
-    background-color: rgba(30, 30, 30, 0.5);
-    border-radius: 2rem;
-    width: 100%;
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    overflow: hidden;
-    transition: all 0.3s ease;
-}
-
-.message-container:hover {
-    border-color: rgba(112, 214, 216, 0.3);
-    box-shadow: 0 10px 30px rgba(112, 214, 216, 0.1);
-}
-
-.message-text {
-    font-size: 2rem;
-    color: #ECD5B3;
-    z-index: 1;
-    text-align: center;
-}
-
-.message-circle {
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background-color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.8rem;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    z-index: 1;
-}
-
-.query {
-    left: 50px;
-    top: 20px;
-}
-
-.request {
-    right: 80px;
-    bottom: 20px;
-}
-
 .project {
     left: 150px;
     bottom: 30px;
@@ -353,7 +279,7 @@ body::after {
     position: absolute;
     top: 0;
     width: 100%;
-    height: 19.3rem;
+    height: 21rem;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     z-index: 0;
@@ -536,6 +462,7 @@ body::after {
 
     .contact-image:hover {
         box-shadow: none; /* Glow effect */
+        box-shadow: inset none;
         outline-color: none; /* Border lights up on hover */
     }
 
@@ -578,7 +505,7 @@ body::after {
     
     .hero-image {
         border-radius: 30px; /* Further reduced for very small screens */
-        margin-top: -4rem;
+        margin-top: -3.8rem;
         margin-right: 2rem;
         margin-bottom: 2rem;
         margin-left: 25%;
