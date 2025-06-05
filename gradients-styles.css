@@ -476,25 +476,116 @@ body::after {
 
 @media (max-width: 576px) {
     .project-title {
-        font-size: 3.5rem;
+        margin-top: -5rem;
+        font-size: 4rem;
     }
     
     .project-info-section h2,
-    .project-mobile h2 {
+    .project-website h2 {
         font-size: 2.5rem;
     }
+
+    .project-goal p {
+        font-size: 1rem;
+        margin-top: 2rem;
+    }
+
+    .divider {
+        width: 85%;
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.2);
+        margin-left: 2.1rem;
+    }
     
-    .nav-links a {
+    .year-tag {
+        top: 1rem;
         font-size: 0.7rem;
+        padding: 0.3rem 0.6rem;
+    }
+
+    .project-goal p {
+        margin-left: 40%;
+    }
+
+    .contact::before {
+        font-size: 10vh; /* Adjusted for smaller screens */
+        top: 25%;
+    }
+
+    .project-mobile h2 {
+        font-size: 3rem;
+        margin-bottom: -1rem;
+        color: #ECD5B3;
+        opacity: .1;
     }
     
-    .message-circle {
-        width: 60px;
-        height: 60px;
-        font-size: 0.6rem;
+    .contact-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .contact-image {
+        outline: 1px solid transparent; /* Initial border */
+        outline-offset: -1px;
+        border-radius: 15px;
+    }
+
+    .contact-image:hover {
+        box-shadow: none; /* Glow effect */
+        box-shadow: inset none;
+        outline-color: none; /* Border lights up on hover */
+    }
+
+    .message-container:hover {
+        border-color: none;
+        box-shadow: none;
+    }
+
+    .contact {
+        min-height: 30vh;
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+
+    .contact-blur {
+        position: absolute;
+        width: 100%;
+        height: 122px;
+        backdrop-filter: blur(7px);
+        -webkit-backdrop-filter: blur(7px);
+        z-index: 0;
+        border-radius: 15px;
+    }
+
+    .mobile-screens {
+        width: 100%;
+        gap: 3rem;
+        align-items: center;
+    }
+
+    .mobile-screen {
+        max-width: 90%;
+        background-color: transparent;
+    }
+
+    .project-mobile h2 {
+        margin-bottom: -9rem;
     }
     
-    .message-text {
-        font-size: 1.2rem;
+    .hero-image {
+        border-radius: 30px; /* Further reduced for very small screens */
+        margin-top: -3.8rem;
+        margin-right: 2rem;
+        margin-bottom: 2rem;
+        margin-left: 25%;
+        width: 1000px;
+        height: auto;
     }
+    
+    .card {
+        border-radius: 10px; /* Further reduced for very small screens */
+    }
+
+
 }
