@@ -30,4 +30,4 @@ For inquiries or collaboration opportunities, please contact:
 - Email: [stefano.londero.2005@gmail.com](mailto:stefano.londero.2005@gmail.com)
 
 ## License
-All rights reserved. © 2025 Stefano Londero. The content of this portfolio is protected under copyright law. test
+All rights reserved. © 2025 Stefano Londero. The content of this portfolio is protected under copyright law.
