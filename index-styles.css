@@ -154,8 +154,9 @@ header::before {
 
 .profile-image img {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: fill;
+    margin-bottom: -10px;
 }
 
 .navigation-arrows {
