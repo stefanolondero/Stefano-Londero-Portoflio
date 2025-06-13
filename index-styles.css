@@ -73,6 +73,23 @@ header::before {
     z-index: -1;
 }
 
+/* Cursor Trail Effect - Header Only */
+.header-cursor-trail {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: transparent;
+    filter: blur(1px);
+    mix-blend-mode: difference;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    backdrop-filter: invert(1) contrast(1.1) brightness(1.1) blur(4px);
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+
 .year-tag {
     position: absolute;
     top: 2rem;
@@ -358,7 +375,27 @@ header::before {
     font-size: 1rem;
 }
 
+.cursor-trail-head {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: transparent;
+    mix-blend-mode: difference;
+    pointer-events: none;
+    backdrop-filter: invert(1) contrast(1.1) brightness(1.1) blur(4px);
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
+}
 @media (max-width: 576px) {
+    .cursor-trail-head {
+        display: none;
+    }
+
     .header-content {
         flex-direction: column;
         text-align: center;
