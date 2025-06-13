@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function setTransition(card) {
         card.style.transition = `transform ${tiltEffectSettings.speed}ms ${tiltEffectSettings.easing}`;
     }
-
+    /*
     // Enhanced ghost trail cursor effect
     const header = document.querySelector('header');
     const divider = document.querySelector('.divider');
@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function() {
             speed: 0.12 + (i * 0.004) // Much smaller speed differences for smoother motion
         });
     }
-    /*
+
     // Animation loop
     function animateTrail() {
         // Update each trail segment
