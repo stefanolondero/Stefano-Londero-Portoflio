@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function() {
             speed: 0.12 + (i * 0.004) // Much smaller speed differences for smoother motion
         });
     }
-    
+    /*
     // Animation loop
     function animateTrail() {
         // Update each trail segment
@@ -144,4 +144,5 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Start animation
     animateTrail();
+    */
 });
