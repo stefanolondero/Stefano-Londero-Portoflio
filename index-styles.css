@@ -9,6 +9,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-user-select: none; /* Safari */
+    user-select: none; /* Standard syntax */
 }
 
 
@@ -84,6 +86,8 @@ header {
     flex-direction: column;
     justify-content: center;
     position: relative;
+    -webkit-user-select: none; /* Safari */
+    user-select: none; /* Standard syntax */
 }
 
 /* Background Text  for HOME Section*/
@@ -381,6 +385,9 @@ header::before {
     border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border for separation */
     position: relative;
     z-index: 1;
+    -webkit-user-select: none; /* Safari */
+    user-select: none; /* Standard syntax */
+    
 }
 
 .footer p {
