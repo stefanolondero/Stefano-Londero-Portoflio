@@ -1,7 +1,7 @@
 # Stefano Londero Portfolio - GitHub README
 
 ## Overview
-This repository contains the personal portfolio website of Stefano Londero, a Computer Science student at UNIUD with a passion for design. The website showcases various design projects including branding, app design, and wallpaper collections.
+Personal portfolio website of Stefano Londero, a Computer Science student at UNIUD with a passion for design. The website showcases various design projects including branding, app design, and wallpaper collections.
 
 ## Features
 - Responsive design for various screen sizes
